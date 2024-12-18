@@ -1,0 +1,18 @@
+class Main {
+    public boolean SunnyNumber(int num){
+        int n = num +1;
+        double m = Math.sqrt(n);
+        if(m*m!=n){
+            return false;
+        }else{
+            return true;
+        }
+    }
+    public static void main(String[] args) {
+        Main s  = new Main();
+        
+        boolean b = s.SunnyNumber(121);
+        System.out.println(b);
+    }
+}
+
