@@ -1,0 +1,21 @@
+public class Main extends Sona{
+        public void getInfo(){
+             System.out.println("All good");
+        }
+        public static void main(String[]args){
+            Main s = new Main();
+             System.out.println("name = "+s.name);
+               System.out.println("age="+s.age);
+                 System.out.println(s.salary);
+                 s.getInfo();
+        }
+    }
+    
+    
+    abstract class Sona{
+    public String name ="John";
+    public int age= 25;
+    public int salary = 25000;
+   public abstract void getInfo();
+
+    }
