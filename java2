@@ -1,0 +1,33 @@
+class Main {
+    public String NumberToWord(int num){
+    String[]array1 ={ "","One", "two", "three", "four", "five","Six", "Seven", "Eight", "Nine", "Ten",
+        "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
+        String[]array2 ={"","","Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
+
+    if(num<20){
+    return array1[num];
+    }else if(num<100){
+        int ori = num;
+         num = num/10;
+         int rem = ori%10;
+        return array2[num] + array1[rem];
+    }else if(num<1000){
+       // while(num>0){
+       int ori1=num;
+        num = num/100;
+        int rem = ori1 %100;
+        int rem1 = rem/10;
+        int res = rem%10;
+        return array1[num] + "hundred" + array2[rem1] + array1[res];
+    }
+    else{
+        return "invalid";
+    }
+}
+
+    public static void main(String[] args) {
+        Main n = new Main();
+        String m =  n.NumberToWord(123);
+        System.out.print(m);
+    }
+}
