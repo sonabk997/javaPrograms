@@ -1,0 +1,17 @@
+class Main { 
+    public boolean AutomorphicNumber(int num){
+        int i = (num*num) %100;
+         if(num!=i){
+             return false;
+         }
+        else{
+            return true;
+        }
+    }
+    public static void main(String[] args) {
+        Main s = new Main();
+      boolean b = s.AutomorphicNumber(76);
+        System.out.print(b);
+    }
+}
+
