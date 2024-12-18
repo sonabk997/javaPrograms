@@ -1,0 +1,32 @@
+import java.util.*;
+public class consecutive {
+    public static void main(String[] args) {
+        boolean o = false;
+        int[] a = {0,4,60,61,67,63,62,78};
+        TreeSet<Integer> s = new TreeSet<>();
+        for (int i = 0; i < a.length; i++) {
+            s.add(a[i]);
+        }
+        System.out.println(s);
+        Integer[] array = s.toArray(new Integer[0]);
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+        for (int i = 0; i < array.length; i++) {
+            int current = array[i];
+            int next = array[i+1];
+            if (array[i] +1 == array[i+1]) {
+                System.out.print(array[i]+" ");
+
+            } else {
+                System.out.println(array[i]); ;
+                break;
+            }
+        }
+    }
+}
+
+
+
+
