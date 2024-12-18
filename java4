@@ -1,0 +1,28 @@
+class Main { 
+   public boolean PetersonNumber(int num){
+       // 123 = 1! +2!+3! = 123
+       int ori = num;
+      int sum =0;
+      while(num>0){
+          
+          int s = num %10;
+         
+           sum +=factorialNumber(s);
+          num=num/10;
+    }
+    return(ori ==sum);
+   }
+    static int factorialNumber(int n){
+        if(n==1|| n==0){
+            return 1;
+        }
+       return n*factorialNumber(n-1);
+        
+    }
+
+    public static void main(String[] args) {
+        Main s = new Main();
+     boolean b = s.PetersonNumber(145);
+        System.out.print(b);
+    }
+}
