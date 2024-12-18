@@ -1,0 +1,26 @@
+public class constructor {
+    int age;
+    int id;
+    int Salary;
+    public constructor(){
+         this.age=78;
+         this.id=789;
+         this.Salary = 386745;
+    }
+    public int getSalary(){
+        return Salary;
+    }
+    public void setSalary(int Salary){
+        this.Salary = Salary;
+    }
+
+    public static void main(String[] args) {
+        constructor s = new constructor();
+        System.out.println(s.age);
+        System.out.println(s.id);
+       int i = s.getSalary();
+        System.out.println(i);
+       s.setSalary(1000000);
+        System.out.println(s.getSalary());
+    }
+}
