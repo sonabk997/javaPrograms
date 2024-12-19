@@ -1,0 +1,13 @@
+public class duplicate {
+    public static void main(String[] args) {
+        int[] y = {1,2,2,3,3,4,5};
+        for(int i =0;i<y.length;i++){
+            for(int j = i+1;j<y.length;j++){
+                if(y[i]==y[j] && i!=j){
+                    System.out.println("duplicate =" + y[j]);
+
+                }
+            }
+        }
+    }
+}
