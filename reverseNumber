@@ -1,0 +1,15 @@
+class sona1{
+    public static void main(String[] args) {
+        int num1= 121;
+        int num = num1;
+        int reverse = 0;
+        while (num> 0) {
+            int remainder = num % 10;
+            reverse = reverse * 10 + remainder;
+            num = num / 10;
+        }
+        System.out.println(reverse);
+
+        System.out.println(reverse==num1? "palindrome":"not palindrome");
+    }
+    }
