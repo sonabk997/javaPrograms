@@ -1,0 +1,48 @@
+class s{
+// Fields
+private String name;
+private int age;
+
+// Constructor
+public s(String name, int age) {
+    this.name = name;
+    this.age = age;
+}
+
+// Methods
+public void eat() {
+    System.out.println(name + " is eating.");
+}
+
+public void sleep() {
+    System.out.println(name + " is sleeping.");
+}
+public String getName() {
+    return name;
+}
+public static class ss extends s {
+    public ss(String name, int age) {
+        super(name, age);
+    }
+
+    public void bark() {
+        System.out.println(getName() + " is barking.");
+    }
+    public static void main(String[] args) {
+        // Creating an instance of Animal
+        s myAnimal = new s("Buddy", 3);
+
+        // Calling methods of Animal class
+        myAnimal.eat();
+        myAnimal.sleep();
+
+        // Creating an instance of Dog
+        s myDog = new ss("Sona",24);
+
+        // Calling methods of Dog class
+        myDog.eat();  // Inherited from Animal
+        myDog.sleep();  // Inherited from Animal
+        myDog.bark();  // Method specific to Dog
+    }
+}
+}
