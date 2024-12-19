@@ -1,0 +1,35 @@
+public class java1 {
+    public static int[]removeAnElement(int[]array,int element){
+        if(array==null||array.length==0){
+            return array;
+        }
+        int indexToRemove = -1;
+        for(int i=0;i<array.length;i++){
+            if(array[i]==element){
+                indexToRemove = i;
+                break;
+            }
+        }
+        if(indexToRemove==-1){
+            return array;
+        }
+
+        int[]newArray = new int[array.length-1];
+        int newIndex =0;
+        for(int i=0;i<array.length;i++){
+            if(i!=indexToRemove){
+                newArray[newIndex]=array[i];
+                newIndex++;
+            }
+        }
+        return newArray;
+    }
+
+    public static void main(String[] args) {
+        int[]a1 = {1,2,3,4,5};
+        int []newArray = removeAnElement(a1,3);
+        for(int i :newArray){
+            System.out.println(i);
+        }
+    }
+}
