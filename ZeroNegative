@@ -1,0 +1,20 @@
+class ToFindZeroOrNegative{
+    public static void main(String[] args) {
+        int[]a1 ={1,2,3,8};
+        boolean s = true;
+        for(int i=0;i<a1.length;i++){
+            if(a1[i]==0||a1[i]==-1) {
+                s = false;
+                break;
+
+            }
+        }
+
+            if(s){
+                System.out.println("clean");
+            }
+            else {
+                System.out.println("there  is -1 or 0");
+            }
+        }
+    }
