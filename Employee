@@ -1,0 +1,18 @@
+class Employee {
+    String name;
+    int id;
+    int age;
+    int Salary;
+    public void printDetails() {
+        System.out.println(name);
+        System.out.println(id);
+        System.out.println(age);
+        return;
+    }
+    public int getSalary(){
+        return Salary;
+    }
+    public void setSalary(int Salary){
+        this.Salary = Salary;
+    }
+}
