@@ -1,0 +1,52 @@
+
+abstract class Animal {
+    private String name;
+    private int age;
+
+    // Constructor to initialize name and age
+    public Animal(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Abstract method makeSound - must be implemented by subclasses
+    public abstract void makeSound();
+
+    // Concrete method to display the animal's details
+    public void displayDetails() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+
+    // Getter method for name
+    public String getName() {
+        return name;
+    }
+}
+
+// Subclass Dog that extends Animal
+class Dog extends Animal {
+    // Constructor that calls the superclass constructor
+    public Dog(String name, int age) {
+        super(name, age);
+    }
+
+    // Implementing the abstract method makeSound
+    @Override
+    public void makeSound() {
+        System.out.println(getName() + " says Woof!");
+    }
+}
+
+// Main class to run the code
+public class t {
+    public static void main(String[] args) {
+        // Creating an instance of Dog
+        Animal myDog = new Dog("Buddy", 3);
+
+        // Displaying the details of the dog
+        myDog.displayDetails();  // Output: Name: Buddy, Age: 3
+
+        // Calling the makeSound method
+        myDog.makeSound();  // Output: Buddy says Woof!
+    }
+}
