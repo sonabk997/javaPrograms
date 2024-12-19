@@ -1,0 +1,22 @@
+class s5{
+    public static void main(String[] args) {
+        int []old = {1,2,3,4,5};
+        int index = 2;
+        int element = 90;
+        int[]now  = new int[old.length+1];
+        for(int i =0;i<index;i++){
+            now[i]=old[i];
+        }
+        for(int i=0;i<now.length;i++) {
+            System.out.print(now[i]);
+        }
+        now[2]= element;
+        for(int i =index + 1;i<now.length;i++){
+            now[i]=old[i-1];
+        }
+        System.out.println(" ");
+        for (int i=0;i<now.length;i++){
+            System.out.print(now[i]+" ");
+        }
+    }
+}
