@@ -1,0 +1,27 @@
+mport java.util.Scanner;
+class sus{
+   static void withoutRepeating(int[]array) {
+       int count = 1;
+       for (int i = 0; i < array.length - 1; i++) {
+           if (array[i] == array[i + 1]) {
+               count++;
+           } else {
+
+               System.out.println(array[i]);
+               count = 1;
+           }
+       }
+       System.out.println(array[array.length - 1]);
+
+   }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[]arr = new int[n];
+        for(int i =0;i< arr.length;i++){
+            arr[i]= sc.nextInt();
+        }
+        withoutRepeating(arr);
+    }
+
+}
