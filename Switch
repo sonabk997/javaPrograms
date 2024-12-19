@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int age = sc.nextInt();
+        switch(age){
+        case 4:
+        System.out.println("Kindergarten");
+        break;
+        case 10:
+        System.out.println("kid");
+        break;
+        case 18:
+        System.out.println("Teen");
+        break;
+        case 21:
+        System.out.println("Adult");
+        break;
+        default:
+        System.out.println("Invalid");
+    }
+}
+}
