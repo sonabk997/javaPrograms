@@ -1,0 +1,23 @@
+public class s6 {
+        public static void main(String[] args) {
+            int[] array = {5, 3, 9, 1, 7, 2, 8, 4, 6,80,97,65};
+
+            // Initialize max and min with the first element of the array
+            int max = array[0];
+            int min = array[0];
+
+            // Iterate through the array to find max and min
+            for (int i = 1; i < array.length; i++) {
+                if (array[i] > max) {
+                    max = array[i];
+                }
+                if (array[i] < min) {
+                    min = array[i];
+                }
+            }
+
+            // Print the max and min values
+            System.out.println("Maximum value: " + max);
+            System.out.println("Minimum value: " + min);
+        }
+
