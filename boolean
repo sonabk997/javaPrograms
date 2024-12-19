@@ -1,0 +1,12 @@
+public class specific {
+    public static void main(String[] args) {
+        int[] a = {1,2,3,3,4};
+        boolean t= false;
+        for(int n: a) {
+            if (90 == n) {
+                t = true;
+            }
+        }
+                System.out.println(t);
+            }
+        }
