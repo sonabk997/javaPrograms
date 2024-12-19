@@ -1,0 +1,48 @@
+ublic class s3 {
+        public static int[] removeElement(int[] array, int elementToRemove) {
+            // Check if the array is null or empty
+            if (array == null || array.length == 0) {
+                return array;
+            }
+
+            // Find the index of the element to remove
+            int indexToRemove = -1;
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] == elementToRemove) {
+                    indexToRemove = i;
+                    break;
+                }
+            }
+
+            // If the element is not found, return the original array
+            if (indexToRemove == -1) {
+                return array;
+            }
+
+            // Create a new array with size one less than the original array
+            int[] newArray = new int[array.length - 1];
+
+            // Copy elements from the original array to the new array, excluding the element to remove
+            int newIndex = 0;
+            for (int i = 0; i < array.length; i++) {
+                if (i != indexToRemove) {
+                    newArray[newIndex] = array[i];
+                    newIndex++;
+                }
+            }
+
+            return newArray;
+        }
+
+        public static void main(String[] args) {
+            int[] originalArray = {1, 2, 3, 4, 5};
+            int elementToRemove = 3;
+
+            int[] newArray = removeElement(originalArray, elementToRemove);
+
+            // Print the new array
+            for (int i : newArray) {
+                System.out.print(i + " ");
+            }
+        }
+    }
