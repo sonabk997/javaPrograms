@@ -1,0 +1,14 @@
+import java.util.*;
+public class ToRemoveDuplicate {
+    public static void main(String[] args) {
+        int[] s1 = {10, 20, 10, 20, 30, 30, 40, 50, 60, 70, 89};
+        TreeSet<Integer> s = new TreeSet<>();
+        for (int i = 0; i < s1.length; i++) {
+            s.add(s1[i]);
+        }
+        System.out.println(s);
+        Integer[] array = s.toArray(new Integer[0]);
+        System.out.println(Arrays.toString(array));
+    }
+}
+
