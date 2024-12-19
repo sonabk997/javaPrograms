@@ -1,0 +1,37 @@
+mport java.util.Scanner;
+public class matrix {
+    public static void main(String[] args) {
+        int a, b, c , d;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of matrix a n b");
+        a = sc.nextInt();
+        b = sc.nextInt();
+        int[][] a1 = new int[a][b];
+        int[][] a2 = new int[a][b];
+        int[][] sum = new int[a][b];
+        System.out.println("enter the first matrix");
+        for (c = 0; c < a; c++) {
+            for (d = 0; d < b; d++) {
+                a1[c][d] = sc.nextInt();
+            }
+        }
+        System.out.println("enter the second matrix");
+        for (c = 0; c < a; c++) {
+            for (d = 0; d < b; d++) {
+                a2[c][d] = sc.nextInt();
+            }
+        }
+        for (c = 0; c < a; c++) {
+            for (d = 0; d < b; d++) {
+                sum[c][c] = a1[c][d] + a2[c][d];
+            }
+        }
+        System.out.println("displaying the sum matrix");
+        for (c = 0; c < a; c++) {
+            for (d = 0; d < b; d++) {
+                System.out.print(sum[c][d] + "\t ");
+                System.out.println();
+            }
+        }
+    }
+}
