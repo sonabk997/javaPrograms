@@ -1,0 +1,19 @@
+public class s7{
+    public static int[] insert(int[] array, int index, int element) {
+        for (int i = array.length - 1; i > index; i--) {
+            array[i] = array[i - 1];
+        }
+        array[index] = element;
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+        return array;
+    }
+
+    public static void main(String[] args) {
+        int[] a = {1, 2, 3, 4, 5};
+
+        System.out.print(insert(a, 2, 80));
+
+    }
+}
