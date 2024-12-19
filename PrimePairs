@@ -1,0 +1,31 @@
+public class para {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 7, 8, 10, 11, 13};
+
+        System.out.println("Pairs whose sum is a prime number:");
+        printPairsWithPrimeSum(array);
+    }
+
+    private static void printPairsWithPrimeSum(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            int sum = array[i] + array[i + 1];
+            if (isPrime(sum)) {
+                System.out.println("(" + array[i] + ", " + array[i + 1] + ")");
+            }
+        }
+    }
+
+    private static boolean isPrime(int num) {
+        if (num < 2) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+
