@@ -1,0 +1,19 @@
+public class equal {
+    public static void  result(int []array1,int []array2) {
+        if (array1.length != array2.length) {
+            System.out.println("Length is not same");
+            return;
+        }
+        boolean s1 = true;
+        for (int i = 0; i < array1.length; i++) {
+            if (array1[i] != array2[i]) {
+                s1 = false;
+                break;
+            }
+        }
+            if (s1) {
+                System.out.println("Same");
+            } else {
+                System.out.println("Different");
+            }
+        }
